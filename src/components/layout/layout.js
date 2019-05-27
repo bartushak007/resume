@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Footer from "./footer"
+import Footer from "./footer";
 
-import { Heading, Section, Block, Wrapper } from "../../emotion"
+import '../../css/index.css';
+
+import { Section, Block, Wrapper } from "../../emotion"
 
 const Layout = ({ children }) => (
   <StaticQuery

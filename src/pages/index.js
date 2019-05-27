@@ -6,7 +6,7 @@ import Avatar from "../components/layout/avatar"
 import SEO from "../components/layout/seo"
 import { graphql } from "gatsby"
 
-import { Heading, Section, Block } from "../emotion"
+import { Heading2, Section, Block } from "../emotion"
 
 const IndexPage = ({ data }) => {
   const { homePage } = data.dataJson
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Heading>{homePage.info.age}</Heading>
+      <Heading2>{homePage.info.age}</Heading2>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>

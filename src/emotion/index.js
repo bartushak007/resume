@@ -1,11 +1,27 @@
 import styled from "@emotion/styled"
 const background = props => props.background
 const backgroundImage = props => props.backgroundImage
+const 
+  colors = {
+    gray: '#333333'
+  },
+  durationAnimation = {
+    icons: '0.4s'
+  };
 
-export const Heading = styled("h1")`
+
+export const Heading2 = styled("h2")`
   background-color: ${props => props.bg};
   color: ${props => props.fg};
+  font-family: Arial;
 `
+
+export const Heading3 = styled("h3")`
+  background-color: ${props => props.bg};
+  color: ${props => props.fg};
+  font-family: Arial;
+`
+
 
 export const Wrapper = styled("div")`
   background: ${background};
@@ -31,25 +47,60 @@ export const Block = styled("div")`
 export const SocialLink = styled("a")`
   color: #fff;
   text-decoration: none;
-  padding: 10px;
+  margin-right: 15px;
   font-size: 25px;
   cursor: pointer;
+  transition: ${durationAnimation.icons};
+  transform: rotate(0deg);   
+  
+  &:hover {    
+    color: #607d8b;
+  }  
+
+  &:hover svg {
+    animation: heartbeat 1s infinite;
+    @keyframes heartbeat
+    {
+      0%
+      {
+        transform: scale(1 );
+      }
+      50%
+      {
+        transform: scale( .8 );
+      }
+            
+      100%
+      {
+        transform: scale( 1 );
+      }      
+    }
+  }
 `
 
 export const FooterToggle = styled("div")`
-  background-color: #333333;
+  background-color: ${colors.gray};
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  opacity: 0;
-  transition: height 0.6s;
-  padding-top: 20px;
-  text-align: right;
+  height: 2px;  
+  transition: height 0.6s;  
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
 
   &:hover {
-    height: 50px;
-    opacity: 1;
-  }
+    height: 70px;
+    opacity: 0.8;    
+  }  
+`
+export const List = styled("ul")`
+  display: flex;
+`
+export const ListItem = styled("li")`
+  list-style-type: none;
+  margin-left: 15px;
+  font-size: 25px;
+  color: white;
 `

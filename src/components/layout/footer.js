@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
   faLinkedin,
-  faGit,
+  faGithub,
   faSkype,
 } from "@fortawesome/free-brands-svg-icons"
-const icons = { faFacebook, faLinkedin, faGit, faSkype }
+const icons = { faFacebook, faLinkedin, faGithub, faSkype }
 
 const Footer = ({ sociall }) => {
   const capitalize = str => str[0].toUpperCase() + str.slice(1)
@@ -24,7 +24,7 @@ const Footer = ({ sociall }) => {
           {sociall.map(({ link, name }) => {
             const icon = icons["fa" + capitalize(name)]
             return (
-              <SocialLink key={name} href={link}>
+              <SocialLink key={name} href={link} target="_blank">
                 {Icon(icon, name)}
               </SocialLink>
             )

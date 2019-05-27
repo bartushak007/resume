@@ -1,23 +1,19 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Heading, Section, Block, Wrapper } from "../../emotion"
+import { Heading2, Heading3, Section, Block, Wrapper } from "../../emotion"
+import Nav from "./nav"
 
 const Header = ({ siteTitle, siteDescription }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#333333`,
+      display: `flex`,
+      justifyContent:"space-around",
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <Heading>
+    <div>
+      <Heading2>
         <Link
           to="/"
           style={{
@@ -27,8 +23,8 @@ const Header = ({ siteTitle, siteDescription }) => (
         >
           {siteTitle}
         </Link>
-      </Heading>
-      <Heading>
+      </Heading2>
+      <Heading3>
         <Link
           to="/"
           style={{
@@ -38,8 +34,9 @@ const Header = ({ siteTitle, siteDescription }) => (
         >
           {siteDescription}
         </Link>
-      </Heading>
+      </Heading3>
     </div>
+    <Nav/>
   </header>
 )
 
