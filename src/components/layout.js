@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import { Heading, Section, Block, Wrapper } from "../emotion"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,8 +26,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          siteDescription={data.site.siteMetadata.description}
+        />
+        {console.log(data.site.siteMetadata.title)}
+        <Wrapper
           style={{
             margin: `0 auto`,
             maxWidth: 960,
@@ -40,7 +45,7 @@ const Layout = ({ children }) => (
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
-        </div>
+        </Wrapper>
       </>
     )}
   />

@@ -1,0 +1,18 @@
+{
+  "homePage": {
+    "fullName": "Roman Bartushak",
+    "title": "Front End Developer",
+    "info": {
+      "age": "28",
+      "address": "Kyiv",
+      "email": "rmnbrtshk@gmail.com",
+      "phone": "+380970296659"
+    },
+    "social": {
+      "linkedin": "#",
+      "facebook": "#",
+      "git": "#",
+      "skype": "#"
+    }
+  }
+}
