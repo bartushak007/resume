@@ -1,18 +1,38 @@
 {
-  "homePage": {
+  "author": {
     "fullName": "Roman Bartushak",
-    "title": "Front End Developer",
+    "title": "Front End Developer"
+  },
+  "homePage": {
     "info": {
       "age": "28",
       "address": "Kyiv",
       "email": "rmnbrtshk@gmail.com",
       "phone": "+380970296659"
-    },
-    "social": {
-      "linkedin": "#",
-      "facebook": "#",
-      "git": "#",
-      "skype": "#"
     }
-  }
+  },
+  "social": {
+    "linkedin": "#",
+    "facebook": "#",
+    "git": "#",
+    "skype": "#"
+  },
+  "sociall": [
+    {
+      "name": "linkedin",
+      "link": "#"
+    },
+    {
+      "name": "facebook",
+      "link": "#"
+    },
+    {
+      "name": "git",
+      "link": "#"
+    },
+    {
+      "name": "skype",
+      "link": "#"
+    }
+  ]
 }

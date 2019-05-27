@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Heading, Section, Block, Wrapper } from "../emotion"
+import { Heading, Section, Block, Wrapper } from "../../emotion"
 
 const Header = ({ siteTitle, siteDescription }) => (
   <header
