@@ -1,8 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes, { string } from "prop-types"
 import React from "react"
-import { Block, Wrapper, SocialLink, FooterToggle } from "../../emotion"
-
+import {
+  StyleBlock,
+  StyleWrapper,
+  StyleSocialLink,
+  StyleSection,
+} from "../../emotion"
+import { StyleFooter } from "./styles"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -13,25 +18,26 @@ import {
 const icons = { faFacebook, faLinkedin, faGithub, faSkype }
 
 const Footer = ({ sociall }) => {
-  const capitalize = str => str[0].toUpperCase() + str.slice(1)
+  const capitalize = str =>
+    str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
   const Icon = (icon, name) =>
     icon ? <FontAwesomeIcon icon={icon} /> : name.toUpperCase()
 
+  const renderSocialLink = ({ link, name }) => {
+    const icon = icons["fa" + capitalize(name)]
+    return (
+      <StyleSocialLink key={name} href={link} target="_blank">
+        {Icon(icon, name)}
+      </StyleSocialLink>
+    )
+  }
+
   return (
-    <FooterToggle>
-      <Wrapper>
-        <Block>
-          {sociall.map(({ link, name }) => {
-            const icon = icons["fa" + capitalize(name)]
-            return (
-              <SocialLink key={name} href={link} target="_blank">
-                {Icon(icon, name)}
-              </SocialLink>
-            )
-          })}
-        </Block>
-      </Wrapper>
-    </FooterToggle>
+    <StyleSection>
+      <StyleFooter>
+        <StyleWrapper>{sociall.map(renderSocialLink)}</StyleWrapper>
+      </StyleFooter>{" "}
+    </StyleSection>
   )
 }
 

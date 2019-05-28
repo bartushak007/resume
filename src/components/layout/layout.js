@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Footer from "./footer";
+import Footer from "./footer"
 
-import '../../css/index.css';
+import "../../css/index.css"
 
-import { Section, Block, Wrapper } from "../../emotion"
+import { StyleSection, StyleBlock, StyleWrapper } from "../../emotion"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -34,9 +34,10 @@ const Layout = ({ children }) => (
             siteTitle={siteMetadata.title}
             siteDescription={siteMetadata.description}
           />
-          <Wrapper>
+
+          <StyleWrapper>
             <main>{children}</main>
-          </Wrapper>
+          </StyleWrapper>
           <Footer sociall={dataJson.sociall} />
         </>
       )
